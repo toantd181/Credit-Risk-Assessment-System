@@ -382,8 +382,7 @@ def health():
     })
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+
     print("\n" + "="*70)
     print("🚀 CREDIT RISK ASSESSMENT API")
     print("="*70)
@@ -393,6 +392,7 @@ if __name__ == '__main__':
         print("\n✅ Starting server...")
         print("📡 API will be available at: http://localhost:5000")
         print("="*70 + "\n")
-        app.run(debug=True, host='0.0.0.0', port=5000)
+        port = int(os.environ.get("PORT", 5000))
+        app.run(host='0.0.0.0', port=port)
     else:
         print("\n❌ Failed to load model. Please check if 'credit_risk_pytorch_model_v2.pth' exists.")
