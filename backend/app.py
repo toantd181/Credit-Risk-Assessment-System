@@ -382,6 +382,8 @@ def health():
     })
 
 if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
     print("\n" + "="*70)
     print("🚀 CREDIT RISK ASSESSMENT API")
     print("="*70)
