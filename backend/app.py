@@ -106,6 +106,8 @@ def load_model():
         print(f"❌ Error loading model: {str(e)}")
         return False
 
+load_model()
+
 def prepare_input(data):
     """Prepare input data for prediction"""
     try:
